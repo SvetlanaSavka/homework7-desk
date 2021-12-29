@@ -35,6 +35,14 @@
   text-decoration: none;
 }
 
+/* Доминантный на макете шрифт */
+body {
+  font-family: Roboto, sans-serif;
+  background-color: var(--main-title-color);
+  color: var(--fourth-text-color);
+  letter-spacing: -0.03em;
+}
+
 p,
 h1,
 h2,
@@ -206,7 +214,7 @@ img {
 }
 
 .modal__title {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 1.15;
   text-align: center;
@@ -421,7 +429,27 @@ img {
   position: relative;
 }
 
+.header__nav-team {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  margin-right: 50px;
+  color: black;
+}
+
 .header__nav-link.current::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: var(--second-button-color);
+  border-radius: 10px;
+  position: absolute;
+  bottom: -32px;
+}
+
+.header__nav-link::after {
   content: "";
   display: block;
   width: 100%;
@@ -435,19 +463,21 @@ img {
 .header__nav-link {
   color: var(--second-text-color);
   transition: var(--transition);
+  /* &.current::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: var(--second-button-color);
+    border-radius: 10px;
+    position: absolute;
+    bottom: -32px;
+  }
+
+  }*/
 }
 .header__nav-link:hover, .header__nav-link:focus {
   color: var(--first-header-text-color);
-}
-.header__nav-link.current::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 5px;
-  background-color: var(--second-button-color);
-  border-radius: 10px;
-  position: absolute;
-  bottom: -32px;
 }
 
 .header__contacts {
@@ -507,7 +537,7 @@ img {
   padding-bottom: 200px;
   justify-content: center;
   box-sizing: border-box;
-  width: 1600px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 

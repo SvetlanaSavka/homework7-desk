@@ -24,8 +24,26 @@
   transition: color 250ms linear, cubic-bezier(0.6, -0.28, 0.735, 0.045);
   position: relative;
 }
+.header__nav-team {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  margin-right: 50px;
+  color: black;
+}
 
 .header__nav-link.current::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: var(--second-button-color);
+  border-radius: 10px;
+  position: absolute;
+  bottom: -32px;
+}
+.header__nav-link::after {
   content: "";
   display: block;
   width: 100%;
@@ -43,7 +61,7 @@
   &:focus {
     color: var(--first-header-text-color);
   }
-  &.current::after {
+  /* &.current::after {
     content: "";
     display: block;
     width: 100%;
@@ -53,6 +71,8 @@
     position: absolute;
     bottom: -32px;
   }
+    
+  }*/
 }
 
 .header__contacts {
